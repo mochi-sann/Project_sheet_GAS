@@ -25,3 +25,13 @@ function myFunction() {
       .setValue(rangea.getValue());
   }
 }
+
+function deletecellValue() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+
+  for (let i = 0; i < 3; i++) {
+    ss.getSheetByName("③日誌")
+      .getRange(11, 3 + i)
+      .setValue("");
+  }
+}
